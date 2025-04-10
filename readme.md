@@ -13,3 +13,14 @@
 - Python 3.12+
 
 ---
+
+## Установка и запуск
+
+```bash
+git clone https://github.com/Etsellon/todo_fastapi.git
+cd todo_fastapi
+python -m venv .venv
+.venv\Scripts\activate   # Windows
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
