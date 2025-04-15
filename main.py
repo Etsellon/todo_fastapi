@@ -11,8 +11,8 @@ async def root() -> dict[str, str]:
     return {"message": "Hello world!"}
 
 
+app.include_router(task_router)
+
+
 if __name__ == "__main__":
     uvicorn.run(app, host="localhost", port=8000)
-
-
-app.include_router(task_router)

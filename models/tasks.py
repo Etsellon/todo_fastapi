@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 
 
 class Task(BaseModel):
-    id: Annotated[int, Field(default=1, ge=1, description="Идентификатор задачи")]
+    id: Annotated[int, Field(default=0, ge=0, description="Идентификатор задачи")]
     title: Annotated[str, Field(default="Новая задача", title="Название задачи")]
     description: Annotated[str | None, Field(default="", title="Описание задачи")]
     completed: Annotated[bool, Field(default=False)]
